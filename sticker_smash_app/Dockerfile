@@ -1,6 +1,8 @@
 FROM node:16-alpine3.17
 
-WORKDIR /home/StickerSmashStudy
+ARG WD="/home/StickerSmashStudy"
+
+WORKDIR ${WD}
 
 RUN apk update && \
     apk add bash git && \
